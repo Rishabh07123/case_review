@@ -26513,6 +26513,25 @@ session_write_close();
 
 							tbody_tab += '<td id="actionbtn"> ';
 
+							tbody_tab += '<div style="display:flex; align-items:center; justify-content:center; gap:8px; white-space:nowrap;">';
+
+							// Actions Dropdown
+							tbody_tab += '<div class="dropdown" style="display:inline-block; position:relative;">';
+
+							tbody_tab += '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+							tbody_tab += '<i class="glyph-icon icon-ellipsis-h"></i> Actions <span class="caret"></span>';
+							tbody_tab += '</button>';
+
+							tbody_tab += '<ul class="dropdown-menu" style="display:none; position:absolute; top:100%; left:0; min-width:220px; background:#fff; border:1px solid #ddd; border-radius:4px; box-shadow:0 4px 8px rgba(0,0,0,0.15); z-index:9999; padding:5px 0; margin:2px 0 0;">';
+
+							tbody_tab += '<li><a href="balance_details.php" style="display:block; padding:8px 15px; color:#333;">Edit Balance Details</a></li>';
+							tbody_tab += '<li><a href="income_details.php" style="display:block; padding:8px 15px; color:#333;">Edit Income Details</a></li>';
+							tbody_tab += '<li><a href="exam_aur_details.php" style="display:block; padding:8px 15px; color:#333;">Add Exam / AUR Details</a></li>';
+
+							tbody_tab += '</ul>';
+							tbody_tab += '</div>';
+
+
 							if (i == 5 && len_pps_spouse == 6) {
 								tbody_tab += '<button type="button" class="btn btn-xs btn-success" title="AddNew" id="add_new" style="display: inline;" onClick="addNewRowSpousePPS(this);">  <i class="glyph-icon icon-plus"></i> </button>			<button type="button" class="btn btn-xs btn-danger" id="deleterow" title="Delete Row" style="display: inline;" onclick="delete_pps_row(this);" disabled><i class="glyph-icon icon-remove"></i></button> ';
 							} else if (i > 5) {
